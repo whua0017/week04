@@ -11,8 +11,10 @@ router.get('/about', function(req, res){
 
 router.get('/item/:name/:quantity/:price', function(req, res){
     let newId= Math.round(Math.random()*1000);
-    let newname=parse(req.url.name);
-    res.send("id: "+newId+"name: "+newname);
+    let newname=req.params.name;
+    let newquantity=parseInt(req.params.quantity);
+    let newprice=parseInt(req.params.price);
+    res.send("id:"+newId+" name:"+newname+" quantity:"+newquantity+" price:"+newprice);
 
  });
  
