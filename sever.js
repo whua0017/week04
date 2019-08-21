@@ -1,8 +1,11 @@
 let express=require('express');
-
 let app=express();
+let router = require('./router.js');
 
-app.get("/",function(req,res){
+
+app.use('/', router);
+
+/*app.get("/",function(req,res){
     res.send("Hello World");
 });
 
@@ -19,8 +22,6 @@ app.get("/report",function(req,res){
 
 app.get("/about",function(req,res){
     res.send("This is about page");
-});
-
-
+});*/
 
 app.listen(8080);
