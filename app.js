@@ -6,7 +6,7 @@ app.get("/",function(req,res){
     res.send("Hello World");
 });
 
-app.get("/:keyword",function(req,res){
+app.get("/wiki/:keyword",function(req,res){
     console.log(req.url);
     console.log(req.params);
 });
