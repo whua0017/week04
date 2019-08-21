@@ -11,6 +11,12 @@ app.get("/wiki/:keyword/fit2095/:id",function(req,res){
     console.log(req.params);
 });
 
+app.get("/report",function(req,res){
+    console.log(req.url);
+    console.log(req.query);
+
+});
+
 app.get("/about",function(req,res){
     res.send("This is about page");
 });
